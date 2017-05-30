@@ -1,6 +1,8 @@
 (function() {
 
-/*
+  'use strict';
+  
+  /*
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="app.animations.css" />
@@ -22,8 +24,9 @@
     <script src="phone-detail/phone-detail.module.js"></script>
     <script src="phone-detail/phone-detail.component.js"></script>
 */
+  //jsons
+  //require('./phones/phones.webpack');
 
-  'use strict';
 
   //bower components
   require('bootstrap');
@@ -31,8 +34,6 @@
   require('angular-animate');
   require('angular-resource');
   require('angular-route');
-  require('angular-resource');
-
 
   //app
   require('./app.module');
@@ -43,4 +44,8 @@
   require('./core/core.webpack');
   require('./phone-detail/phone-detail.webpack');
   require('./phone-list/phone-list.webpack');
+
+  // Require all the .html files
+  //@require "./**/!(index).html"
+
 }());

@@ -9999,8 +9999,8 @@ angular.element(function() {
   'use strict';
 
   __webpack_require__(13);
-  __webpack_require__(12);
   __webpack_require__(14);
+  __webpack_require__(12);
   __webpack_require__(15);
 }());
 
@@ -10013,7 +10013,7 @@ angular.element(function() {
 
   __webpack_require__(18);
   __webpack_require__(17);
-  __webpack_require__(37);
+  __webpack_require__(38);
 }());
 
 
@@ -10026,7 +10026,7 @@ angular.element(function() {
 
   __webpack_require__(20);
   __webpack_require__(19);
-  __webpack_require__(38);
+  __webpack_require__(37);
 }());
 
 /***/ }),
@@ -10137,7 +10137,9 @@ angular.
 
 (function() {
 
-/*
+  'use strict';
+  
+  /*
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="app.animations.css" />
@@ -10159,8 +10161,9 @@ angular.
     <script src="phone-detail/phone-detail.module.js"></script>
     <script src="phone-detail/phone-detail.component.js"></script>
 */
+  //jsons
+  //require('./phones/phones.webpack');
 
-  'use strict';
 
   //bower components
   __webpack_require__(11);
@@ -10180,6 +10183,7 @@ angular.
   __webpack_require__(5);
   __webpack_require__(6);
   __webpack_require__(7);
+
 }());
 
 
@@ -10231,11 +10235,13 @@ angular.module('phoneDetail', [
 "use strict";
 
 
+var templatePath = __webpack_require__(39);
+
 // Register `phoneList` component, along with its associated controller and template
 angular.
   module('phoneList').
   component('phoneList', {
-    templateUrl: 'phone-list/phone-list.template.html',
+    template: templatePath,
     controller: ['Phone',
       function PhoneListController(Phone) {
         this.phones = Phone.query();
@@ -51426,13 +51432,19 @@ $provide.value("$locale", {
 /* 37 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"phone-images\">\n  <img ng-src=\"{{img}}\" class=\"phone\"\n      ng-class=\"{selected: img === $ctrl.mainImageUrl}\"\n      ng-repeat=\"img in $ctrl.phone.images\" />\n</div>\n\n<h1>{{$ctrl.phone.name}}</h1>\n\n<p>{{$ctrl.phone.description}}</p>\n\n<ul class=\"phone-thumbs\">\n  <li ng-repeat=\"img in $ctrl.phone.images\">\n    <img ng-src=\"{{img}}\" ng-click=\"$ctrl.setImage(img)\" />\n  </li>\n</ul>\n\n<ul class=\"specs\">\n  <li>\n    <span>Availability and Networks</span>\n    <dl>\n      <dt>Availability</dt>\n      <dd ng-repeat=\"availability in $ctrl.phone.availability\">{{availability}}</dd>\n    </dl>\n  </li>\n  <li>\n    <span>Battery</span>\n    <dl>\n      <dt>Type</dt>\n      <dd>{{$ctrl.phone.battery.type}}</dd>\n      <dt>Talk Time</dt>\n      <dd>{{$ctrl.phone.battery.talkTime}}</dd>\n      <dt>Standby time (max)</dt>\n      <dd>{{$ctrl.phone.battery.standbyTime}}</dd>\n    </dl>\n  </li>\n  <li>\n    <span>Storage and Memory</span>\n    <dl>\n      <dt>RAM</dt>\n      <dd>{{$ctrl.phone.storage.ram}}</dd>\n      <dt>Internal Storage</dt>\n      <dd>{{$ctrl.phone.storage.flash}}</dd>\n    </dl>\n  </li>\n  <li>\n    <span>Connectivity</span>\n    <dl>\n      <dt>Network Support</dt>\n      <dd>{{$ctrl.phone.connectivity.cell}}</dd>\n      <dt>WiFi</dt>\n      <dd>{{$ctrl.phone.connectivity.wifi}}</dd>\n      <dt>Bluetooth</dt>\n      <dd>{{$ctrl.phone.connectivity.bluetooth}}</dd>\n      <dt>Infrared</dt>\n      <dd>{{$ctrl.phone.connectivity.infrared | checkmark}}</dd>\n      <dt>GPS</dt>\n      <dd>{{$ctrl.phone.connectivity.gps | checkmark}}</dd>\n    </dl>\n  </li>\n  <li>\n    <span>Android</span>\n    <dl>\n      <dt>OS Version</dt>\n      <dd>{{$ctrl.phone.android.os}}</dd>\n      <dt>UI</dt>\n      <dd>{{$ctrl.phone.android.ui}}</dd>\n    </dl>\n  </li>\n  <li>\n    <span>Size and Weight</span>\n    <dl>\n      <dt>Dimensions</dt>\n      <dd ng-repeat=\"dim in $ctrl.phone.sizeAndWeight.dimensions\">{{dim}}</dd>\n      <dt>Weight</dt>\n      <dd>{{$ctrl.phone.sizeAndWeight.weight}}</dd>\n    </dl>\n  </li>\n  <li>\n    <span>Display</span>\n    <dl>\n      <dt>Screen size</dt>\n      <dd>{{$ctrl.phone.display.screenSize}}</dd>\n      <dt>Screen resolution</dt>\n      <dd>{{$ctrl.phone.display.screenResolution}}</dd>\n      <dt>Touch screen</dt>\n      <dd>{{$ctrl.phone.display.touchScreen | checkmark}}</dd>\n    </dl>\n  </li>\n  <li>\n    <span>Hardware</span>\n    <dl>\n      <dt>CPU</dt>\n      <dd>{{$ctrl.phone.hardware.cpu}}</dd>\n      <dt>USB</dt>\n      <dd>{{$ctrl.phone.hardware.usb}}</dd>\n      <dt>Audio / headphone jack</dt>\n      <dd>{{$ctrl.phone.hardware.audioJack}}</dd>\n      <dt>FM Radio</dt>\n      <dd>{{$ctrl.phone.hardware.fmRadio | checkmark}}</dd>\n      <dt>Accelerometer</dt>\n      <dd>{{$ctrl.phone.hardware.accelerometer | checkmark}}</dd>\n    </dl>\n  </li>\n  <li>\n    <span>Camera</span>\n    <dl>\n      <dt>Primary</dt>\n      <dd>{{$ctrl.phone.camera.primary}}</dd>\n      <dt>Features</dt>\n      <dd>{{$ctrl.phone.camera.features.join(', ')}}</dd>\n    </dl>\n  </li>\n  <li>\n    <span>Additional Features</span>\n    <dd>{{$ctrl.phone.additionalFeatures}}</dd>\n  </li>\n</ul>\n";
+module.exports = "module.exports = \"var angular=window.angular,ngModule;\\ntry {ngModule=angular.module([\\\"ng\\\"])}\\ncatch(e){ngModule=angular.module(\\\"ng\\\",[])}\\nvar v1=\\\"<div class=\\\\\\\"container-fluid\\\\\\\">\\\\n<div class=\\\\\\\"row\\\\\\\">\\\\n<div class=\\\\\\\"col-md-2\\\\\\\">\\\\n<p>\\\\nSearch:\\\\n<input ng-model=\\\\\\\"$ctrl.query\\\\\\\"/>\\\\n</p>\\\\n<p>\\\\nSort by:\\\\n<select ng-model=\\\\\\\"$ctrl.orderProp\\\\\\\">\\\\n<option value=\\\\\\\"name\\\\\\\">Alphabetical</option>\\\\n<option value=\\\\\\\"age\\\\\\\">Newest</option>\\\\n</select>\\\\n</p>\\\\n</div>\\\\n<div class=\\\\\\\"col-md-10\\\\\\\">\\\\n<pre>{{$ctrl.phones}}</pre>\\\\n<ul class=\\\\\\\"phones\\\\\\\">\\\\n<li ng-repeat=\\\\\\\"phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp\\\\\\\" class=\\\\\\\"thumbnail phone-list-item\\\\\\\">\\\\n<a href=\\\\\\\"#!/phones/{{phone.id}}\\\\\\\" class=\\\\\\\"thumb\\\\\\\">\\\\n<img ng-src=\\\\\\\"{{phone.imageUrl}}\\\\\\\" alt=\\\\\\\"{{phone.name}}\\\\\\\"/>\\\\n</a>\\\\n<a href=\\\\\\\"#!/phones/{{phone.id}}\\\\\\\">{{phone.name}}</a>\\\\n<p>{{phone.snippet}}</p>\\\\n</li>\\\\n</ul>\\\\n</div>\\\\n</div>\\\\n</div>\\\\n\\\";\\nvar id1=\\\"app/phone-list/phone-list.template.html\\\";\\nvar inj=angular.element(window.document).injector();\\nif(inj){inj.get(\\\"$templateCache\\\").put(id1,v1);}\\nelse{ngModule.run([\\\"$templateCache\\\",function(c){c.put(id1,v1)}]);}\\nmodule.exports=v1;\";";
 
 /***/ }),
 /* 38 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-2\">\n      <!--Sidebar content-->\n\n      <p>\n        Search:\n        <input ng-model=\"$ctrl.query\" />\n      </p>\n\n      <p>\n        Sort by:\n        <select ng-model=\"$ctrl.orderProp\">\n          <option value=\"name\">Alphabetical</option>\n          <option value=\"age\">Newest</option>\n        </select>\n      </p>\n\n    </div>\n    <div class=\"col-md-10\">\n      <!--Body content-->\n\n      <ul class=\"phones\">\n        <li ng-repeat=\"phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp\"\n            class=\"thumbnail phone-list-item\">\n          <a href=\"#!/phones/{{phone.id}}\" class=\"thumb\">\n            <img ng-src=\"{{phone.imageUrl}}\" alt=\"{{phone.name}}\" />\n          </a>\n          <a href=\"#!/phones/{{phone.id}}\">{{phone.name}}</a>\n          <p>{{phone.snippet}}</p>\n        </li>\n      </ul>\n\n    </div>\n  </div>\n</div>\n";
+module.exports = "var angular=window.angular,ngModule;\ntry {ngModule=angular.module([\"ng\"])}\ncatch(e){ngModule=angular.module(\"ng\",[])}\nvar v1=\"<div class=\\\"phone-images\\\">\\n<img ng-src=\\\"{{img}}\\\" class=\\\"phone\\\" ng-class=\\\"{selected: img === $ctrl.mainImageUrl}\\\" ng-repeat=\\\"img in $ctrl.phone.images\\\"/>\\n</div>\\n<h1>{{$ctrl.phone.name}}</h1>\\n<p>{{$ctrl.phone.description}}</p>\\n<ul class=\\\"phone-thumbs\\\">\\n<li ng-repeat=\\\"img in $ctrl.phone.images\\\">\\n<img ng-src=\\\"{{img}}\\\" ng-click=\\\"$ctrl.setImage(img)\\\"/>\\n</li>\\n</ul>\\n<ul class=\\\"specs\\\">\\n<li>\\n<span>Availability and Networks</span>\\n<dl>\\n<dt>Availability</dt>\\n<dd ng-repeat=\\\"availability in $ctrl.phone.availability\\\">{{availability}}</dd>\\n</dl>\\n</li>\\n<li>\\n<span>Battery</span>\\n<dl>\\n<dt>Type</dt>\\n<dd>{{$ctrl.phone.battery.type}}</dd>\\n<dt>Talk Time</dt>\\n<dd>{{$ctrl.phone.battery.talkTime}}</dd>\\n<dt>Standby time (max)</dt>\\n<dd>{{$ctrl.phone.battery.standbyTime}}</dd>\\n</dl>\\n</li>\\n<li>\\n<span>Storage and Memory</span>\\n<dl>\\n<dt>RAM</dt>\\n<dd>{{$ctrl.phone.storage.ram}}</dd>\\n<dt>Internal Storage</dt>\\n<dd>{{$ctrl.phone.storage.flash}}</dd>\\n</dl>\\n</li>\\n<li>\\n<span>Connectivity</span>\\n<dl>\\n<dt>Network Support</dt>\\n<dd>{{$ctrl.phone.connectivity.cell}}</dd>\\n<dt>WiFi</dt>\\n<dd>{{$ctrl.phone.connectivity.wifi}}</dd>\\n<dt>Bluetooth</dt>\\n<dd>{{$ctrl.phone.connectivity.bluetooth}}</dd>\\n<dt>Infrared</dt>\\n<dd>{{$ctrl.phone.connectivity.infrared | checkmark}}</dd>\\n<dt>GPS</dt>\\n<dd>{{$ctrl.phone.connectivity.gps | checkmark}}</dd>\\n</dl>\\n</li>\\n<li>\\n<span>Android</span>\\n<dl>\\n<dt>OS Version</dt>\\n<dd>{{$ctrl.phone.android.os}}</dd>\\n<dt>UI</dt>\\n<dd>{{$ctrl.phone.android.ui}}</dd>\\n</dl>\\n</li>\\n<li>\\n<span>Size and Weight</span>\\n<dl>\\n<dt>Dimensions</dt>\\n<dd ng-repeat=\\\"dim in $ctrl.phone.sizeAndWeight.dimensions\\\">{{dim}}</dd>\\n<dt>Weight</dt>\\n<dd>{{$ctrl.phone.sizeAndWeight.weight}}</dd>\\n</dl>\\n</li>\\n<li>\\n<span>Display</span>\\n<dl>\\n<dt>Screen size</dt>\\n<dd>{{$ctrl.phone.display.screenSize}}</dd>\\n<dt>Screen resolution</dt>\\n<dd>{{$ctrl.phone.display.screenResolution}}</dd>\\n<dt>Touch screen</dt>\\n<dd>{{$ctrl.phone.display.touchScreen | checkmark}}</dd>\\n</dl>\\n</li>\\n<li>\\n<span>Hardware</span>\\n<dl>\\n<dt>CPU</dt>\\n<dd>{{$ctrl.phone.hardware.cpu}}</dd>\\n<dt>USB</dt>\\n<dd>{{$ctrl.phone.hardware.usb}}</dd>\\n<dt>Audio / headphone jack</dt>\\n<dd>{{$ctrl.phone.hardware.audioJack}}</dd>\\n<dt>FM Radio</dt>\\n<dd>{{$ctrl.phone.hardware.fmRadio | checkmark}}</dd>\\n<dt>Accelerometer</dt>\\n<dd>{{$ctrl.phone.hardware.accelerometer | checkmark}}</dd>\\n</dl>\\n</li>\\n<li>\\n<span>Camera</span>\\n<dl>\\n<dt>Primary</dt>\\n<dd>{{$ctrl.phone.camera.primary}}</dd>\\n<dt>Features</dt>\\n<dd>{{$ctrl.phone.camera.features.join(', ')}}</dd>\\n</dl>\\n</li>\\n<li>\\n<span>Additional Features</span>\\n<dd>{{$ctrl.phone.additionalFeatures}}</dd>\\n</li>\\n</ul>\\n\";\nvar id1=\"app/phone-detail/phone-detail.template.html\";\nvar inj=angular.element(window.document).injector();\nif(inj){inj.get(\"$templateCache\").put(id1,v1);}\nelse{ngModule.run([\"$templateCache\",function(c){c.put(id1,v1)}]);}\nmodule.exports=v1;";
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+module.exports = "var angular=window.angular,ngModule;\ntry {ngModule=angular.module([\"ng\"])}\ncatch(e){ngModule=angular.module(\"ng\",[])}\nvar v1=\"<div class=\\\"container-fluid\\\">\\n<div class=\\\"row\\\">\\n<div class=\\\"col-md-2\\\">\\n<p>\\nSearch:\\n<input ng-model=\\\"$ctrl.query\\\"/>\\n</p>\\n<p>\\nSort by:\\n<select ng-model=\\\"$ctrl.orderProp\\\">\\n<option value=\\\"name\\\">Alphabetical</option>\\n<option value=\\\"age\\\">Newest</option>\\n</select>\\n</p>\\n</div>\\n<div class=\\\"col-md-10\\\">\\n<pre>{{$ctrl.phones}}</pre>\\n<ul class=\\\"phones\\\">\\n<li ng-repeat=\\\"phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp\\\" class=\\\"thumbnail phone-list-item\\\">\\n<a href=\\\"#!/phones/{{phone.id}}\\\" class=\\\"thumb\\\">\\n<img ng-src=\\\"{{phone.imageUrl}}\\\" alt=\\\"{{phone.name}}\\\"/>\\n</a>\\n<a href=\\\"#!/phones/{{phone.id}}\\\">{{phone.name}}</a>\\n<p>{{phone.snippet}}</p>\\n</li>\\n</ul>\\n</div>\\n</div>\\n</div>\\n\";\nvar id1=\"app/phone-list/phone-list.template.html\";\nvar inj=angular.element(window.document).injector();\nif(inj){inj.get(\"$templateCache\").put(id1,v1);}\nelse{ngModule.run([\"$templateCache\",function(c){c.put(id1,v1)}]);}\nmodule.exports=v1;";
 
 /***/ })
 /******/ ]);

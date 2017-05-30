@@ -6,17 +6,23 @@
   "repository": "https://github.com/angular/angular-phonecat",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^2.6.x",
     "extract-text-webpack-plugin": "^2.0.x",
     "html-loader": "^0.4.x",
+    "css-loader": "0.28.3",
+    "required-loader": "1.2.11",
     "html-webpack-plugin": "^2.0.x",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
+    "json-loader": "^0.5.4",
+    "file-loader": "0.11.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
     "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.8",
-    "protractor": "^4.0.9"
+    "ng-cache-loader": "^0.0.24",
+    "protractor": "^4.0.9",
+    "raw-loader": "^0.5.1",
+    "webpack": "^2.6.x"
   },
   "dependencies": {
     "angular": "1.5.x",
