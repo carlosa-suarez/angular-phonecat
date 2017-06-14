@@ -10,6 +10,7 @@
 
   var PATHS = {
     app: path.join(__dirname, 'app', 'index.js'),
+    appts: path.join(__dirname, 'app', 'index.ts'),
     build: path.join(__dirname, 'build'),
     index: path.join(__dirname, 'app', 'index.html'),
     images: path.join(__dirname, 'app', 'img'),
@@ -19,7 +20,7 @@
 
   var config = {
     entry: {
-      app: PATHS.app,
+      app: [PATHS.app, PATHS.appts],
       styles: PATHS.styles
     },
     output: {
@@ -47,6 +48,15 @@
           options: {
             name: 'fonts/[name].[ext]'
           }
+        },
+        {
+          test: /app\.js$/,
+          loader: 'required-loader',
+          exclude: /node_modules/
+        },
+        {
+          test: /\.ts$/,
+          loader: 'awesome-typescript-loader'
         }
       ]
     },
@@ -76,7 +86,15 @@
           '*.gitkeep'
         ]
       })
-    ]
+    ],
+    devtool: 'source-map',
+    resolve: {
+      extensions: ['*', '.js', '.ts'],
+      modules: [
+        'node_modules',
+        'app'
+      ]
+    }
   };
 
   module.exports = [config];
