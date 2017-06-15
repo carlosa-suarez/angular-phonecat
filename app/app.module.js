@@ -10,6 +10,8 @@ angular.module('phonecatApp', [
   'phoneList'
 ]);
 
+/*
 angular.element(function() {
   angular.bootstrap(document, ['phonecatApp']);
 });
+*/
