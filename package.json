@@ -55,5 +55,3 @@
     "dev": "webpack-dev-server"
   }
 }
-
-//    "postinstall": "webpack --config webpack.config.js", doesn't work now

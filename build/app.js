@@ -9951,6 +9951,7 @@ return jQuery;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+console.log("h1");
 var greeter_1 = __webpack_require__(25);
 var greeter = new greeter_1.Greeter('world');
 console.log(greeter.sayHello());
