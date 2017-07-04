@@ -7,7 +7,8 @@ angular.module('phonecatApp', [
   'core',
   'phoneTemplates',
   'phoneDetail',
-  'phoneList'
+  'phoneList',
+  'phoneItem'
 ]);
 
 /*

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 87);
+/******/ 	return __webpack_require__(__webpack_require__.s = 91);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9894,8 +9894,8 @@ return jQuery;
 "use strict";
 
 var root_1 = __webpack_require__(4);
-var toSubscriber_1 = __webpack_require__(84);
-var observable_1 = __webpack_require__(14);
+var toSubscriber_1 = __webpack_require__(88);
+var observable_1 = __webpack_require__(15);
 /**
  * A representation of any set of values over any amount of time. This the most basic building block
  * of RxJS.
@@ -10354,9 +10354,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵx", function() { return DebugContext; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
@@ -24543,9 +24543,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var isFunction_1 = __webpack_require__(16);
+var isFunction_1 = __webpack_require__(17);
 var Subscription_1 = __webpack_require__(5);
-var Observer_1 = __webpack_require__(13);
+var Observer_1 = __webpack_require__(14);
 var rxSubscriber_1 = __webpack_require__(8);
 /**
  * Implements the {@link Observer} interface and extends the
@@ -24834,12 +24834,12 @@ exports.root = _root;
 
 "use strict";
 
-var isArray_1 = __webpack_require__(80);
-var isObject_1 = __webpack_require__(17);
-var isFunction_1 = __webpack_require__(16);
-var tryCatch_1 = __webpack_require__(85);
-var errorObject_1 = __webpack_require__(15);
-var UnsubscriptionError_1 = __webpack_require__(79);
+var isArray_1 = __webpack_require__(84);
+var isObject_1 = __webpack_require__(18);
+var isFunction_1 = __webpack_require__(17);
+var tryCatch_1 = __webpack_require__(89);
+var errorObject_1 = __webpack_require__(16);
+var UnsubscriptionError_1 = __webpack_require__(83);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -25068,8 +25068,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(1);
 var Subscriber_1 = __webpack_require__(3);
 var Subscription_1 = __webpack_require__(5);
-var ObjectUnsubscribedError_1 = __webpack_require__(78);
-var SubjectSubscription_1 = __webpack_require__(67);
+var ObjectUnsubscribedError_1 = __webpack_require__(82);
+var SubjectSubscription_1 = __webpack_require__(71);
 var rxSubscriber_1 = __webpack_require__(8);
 /**
  * @class SubjectSubscriber<T>
@@ -35064,6 +35064,20 @@ var NgAdapterInjector = (function () {
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports) {
+
+var angular=window.angular,ngModule;
+try {ngModule=angular.module(["phoneTemplates"])}
+catch(e){ngModule=angular.module("phoneTemplates",[])}
+var v1="<a href=\"#!/phones/{{$ctrl.phone.id}}\" class=\"thumb\">\n<img ng-src=\"{{$ctrl.phone.imageUrl}}\" alt=\"{{$ctrl.phone.name}}\"/>\n</a>\n<a href=\"#!/phones/{{$ctrl.phone.id}}\">{{$ctrl.phone.name}}</a>\n<p>{{$ctrl.phone.snippet}}</p>";
+var id1="phone-item/phone-item.template.html";
+var inj=angular.element(window.document).injector();
+if(inj){inj.get("$templateCache").put(id1,v1);}
+else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
+module.exports=v1;
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35077,7 +35091,7 @@ exports.empty = {
 //# sourceMappingURL=Observer.js.map
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35109,7 +35123,7 @@ exports.$$observable = exports.observable;
 //# sourceMappingURL=observable.js.map
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35119,7 +35133,7 @@ exports.errorObject = { e: {} };
 //# sourceMappingURL=errorObject.js.map
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35131,7 +35145,7 @@ exports.isFunction = isFunction;
 //# sourceMappingURL=isFunction.js.map
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35143,7 +35157,7 @@ exports.isObject = isObject;
 //# sourceMappingURL=isObject.js.map
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35155,7 +35169,7 @@ exports.isScheduler = isScheduler;
 //# sourceMappingURL=isScheduler.js.map
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function() {
@@ -35189,21 +35203,22 @@ exports.isScheduler = isScheduler;
 
 
   //bower components
-  __webpack_require__(46);
-  __webpack_require__(44);
-  __webpack_require__(38);
-  __webpack_require__(40);
+  __webpack_require__(50);
+  __webpack_require__(48);
   __webpack_require__(42);
+  __webpack_require__(44);
+  __webpack_require__(46);
 
   //app
+  __webpack_require__(24);
   __webpack_require__(23);
   __webpack_require__(22);
-  __webpack_require__(21);
 
   //modules
-  __webpack_require__(26);
-  __webpack_require__(31);
-  __webpack_require__(34);
+  __webpack_require__(27);
+  __webpack_require__(32);
+  __webpack_require__(38);
+  __webpack_require__(35);
 
   // Require all the .html files
   //@require "./**/!(index).html"
@@ -35212,17 +35227,17 @@ exports.isScheduler = isScheduler;
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-__webpack_require__(86);
-__webpack_require__(64);
-var platform_browser_dynamic_1 = __webpack_require__(36);
+__webpack_require__(90);
+__webpack_require__(68);
+var platform_browser_dynamic_1 = __webpack_require__(40);
 var static_1 = __webpack_require__(12);
-var app_module_ts_1 = __webpack_require__(45);
+var app_module_ts_1 = __webpack_require__(49);
 platform_browser_dynamic_1.platformBrowserDynamic()
     .bootstrapModule(app_module_ts_1.AppModule)
     .then(function (platformRef) {
@@ -35232,7 +35247,7 @@ platform_browser_dynamic_1.platformBrowserDynamic()
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35282,7 +35297,7 @@ angular.
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35307,7 +35322,7 @@ angular.
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35320,7 +35335,8 @@ angular.module('phonecatApp', [
   'core',
   'phoneTemplates',
   'phoneDetail',
-  'phoneList'
+  'phoneList',
+  'phoneItem'
 ]);
 
 /*
@@ -35330,7 +35346,7 @@ angular.element(function() {
 */
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35346,7 +35362,7 @@ angular.
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35357,20 +35373,20 @@ angular.module('core', ['core.phone']);
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function() {
   'use strict';
 
-  __webpack_require__(25);
-  __webpack_require__(27);
-  __webpack_require__(24);
+  __webpack_require__(26);
   __webpack_require__(28);
+  __webpack_require__(25);
+  __webpack_require__(29);
 }());
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35381,7 +35397,7 @@ angular.module('core.phone', ['ngResource']);
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35403,7 +35419,7 @@ angular.
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35430,7 +35446,7 @@ angular.
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35444,26 +35460,70 @@ angular.module('phoneDetail', [
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function() {
   'use strict';
 
+  __webpack_require__(31);
   __webpack_require__(30);
-  __webpack_require__(29);
-  __webpack_require__(61);
+  __webpack_require__(65);
 }());
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var templatePath = __webpack_require__(62);
+var templatePath = __webpack_require__(13);
+console.log("here");
+// Register `phoneList` component, along with its associated controller and template
+angular.
+  module('phoneItem').
+  component('phoneItem', {
+    template: templatePath,
+    bindings: {
+    	phone: '='
+    },
+    controller: [function PhoneController($scope) {
+      console.log('fdas');
+    }]
+  });
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Define the `phone` module
+angular.module('phoneItem', ['core.phone']);
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function() {
+  'use strict';
+
+  __webpack_require__(34);
+  __webpack_require__(33);
+  __webpack_require__(13);
+}());
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var templatePath = __webpack_require__(66);
 
 // Register `phoneList` component, along with its associated controller and template
 angular.
@@ -35480,7 +35540,7 @@ angular.
 
 
 /***/ }),
-/* 33 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35491,19 +35551,19 @@ angular.module('phoneList', ['core.phone']);
 
 
 /***/ }),
-/* 34 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function() {
   'use strict';
 
-  __webpack_require__(33);
-  __webpack_require__(32);
-  __webpack_require__(60);
+  __webpack_require__(37);
+  __webpack_require__(36);
+  __webpack_require__(64);
 }());
 
 /***/ }),
-/* 35 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62119,7 +62179,7 @@ var ImportResolver = (function () {
 //# sourceMappingURL=compiler.es5.js.map
 
 /***/ }),
-/* 36 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62129,7 +62189,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VERSION", function() { return VERSION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵINTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS", function() { return INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵResourceLoaderImpl", function() { return ResourceLoaderImpl; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_compiler__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_compiler__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(11);
@@ -62306,7 +62366,7 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__
 
 
 /***/ }),
-/* 37 */
+/* 41 */
 /***/ (function(module, exports) {
 
 /**
@@ -66464,15 +66524,15 @@ angular.module('ngAnimate', [], function initAngularHelpers() {
 
 
 /***/ }),
-/* 38 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(37);
+__webpack_require__(41);
 module.exports = 'ngAnimate';
 
 
 /***/ }),
-/* 39 */
+/* 43 */
 /***/ (function(module, exports) {
 
 /**
@@ -67344,15 +67404,15 @@ angular.module('ngResource', ['ng']).
 
 
 /***/ }),
-/* 40 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(39);
+__webpack_require__(43);
 module.exports = 'ngResource';
 
 
 /***/ }),
-/* 41 */
+/* 45 */
 /***/ (function(module, exports) {
 
 /**
@@ -68429,15 +68489,15 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 
 /***/ }),
-/* 42 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(41);
+__webpack_require__(45);
 module.exports = 'ngRoute';
 
 
 /***/ }),
-/* 43 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/**
@@ -101064,15 +101124,15 @@ $provide.value("$locale", {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 44 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(43);
+__webpack_require__(47);
 module.exports = angular;
 
 
 /***/ }),
-/* 45 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101105,25 +101165,25 @@ exports.AppModule = AppModule;
 
 
 /***/ }),
-/* 46 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
-__webpack_require__(58)
-__webpack_require__(48)
-__webpack_require__(49)
-__webpack_require__(50)
-__webpack_require__(51)
+__webpack_require__(62)
 __webpack_require__(52)
 __webpack_require__(53)
-__webpack_require__(57)
 __webpack_require__(54)
 __webpack_require__(55)
 __webpack_require__(56)
-__webpack_require__(47)
+__webpack_require__(57)
+__webpack_require__(61)
+__webpack_require__(58)
+__webpack_require__(59)
+__webpack_require__(60)
+__webpack_require__(51)
 
 /***/ }),
-/* 47 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -101292,7 +101352,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 48 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -101393,7 +101453,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 49 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -101525,7 +101585,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 50 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -101769,7 +101829,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 51 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -101988,7 +102048,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 52 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -102160,7 +102220,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 53 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -102506,7 +102566,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 54 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -102621,7 +102681,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 55 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -102800,7 +102860,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 56 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -102962,7 +103022,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 57 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -103489,7 +103549,7 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 58 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -103555,14 +103615,14 @@ __webpack_require__(47)
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 59 */,
-/* 60 */
+/* 63 */,
+/* 64 */
 /***/ (function(module, exports) {
 
-module.exports = "var angular=window.angular,ngModule;\ntry {ngModule=angular.module([\"phoneTemplates\"])}\ncatch(e){ngModule=angular.module(\"phoneTemplates\",[])}\nvar v1=\"<div class=\\\"container-fluid\\\">\\n<div class=\\\"row\\\">\\n<div class=\\\"col-md-2\\\">\\n<p>\\nSearch:\\n<input ng-model=\\\"$ctrl.query\\\"/>\\n</p>\\n<p>\\nSort by:\\n<select ng-model=\\\"$ctrl.orderProp\\\">\\n<option value=\\\"name\\\">Alphabetical</option>\\n<option value=\\\"age\\\">Newest</option>\\n</select>\\n</p>\\n</div>\\n<div class=\\\"col-md-10\\\">\\n<ul class=\\\"phones\\\">\\n<li ng-repeat=\\\"phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp\\\" class=\\\"thumbnail phone-list-item\\\">\\n<a href=\\\"#!/phones/{{phone.id}}\\\" class=\\\"thumb\\\">\\n<img ng-src=\\\"{{phone.imageUrl}}\\\" alt=\\\"{{phone.name}}\\\"/>\\n</a>\\n<a href=\\\"#!/phones/{{phone.id}}\\\">{{phone.name}}</a>\\n<p>{{phone.snippet}}</p>\\n</li>\\n</ul>\\n</div>\\n</div>\\n</div>\\n\";\nvar id1=\"phone-list/phone-list.template.html\";\nvar inj=angular.element(window.document).injector();\nif(inj){inj.get(\"$templateCache\").put(id1,v1);}\nelse{ngModule.run([\"$templateCache\",function(c){c.put(id1,v1)}]);}\nmodule.exports=v1;";
+module.exports = "var angular=window.angular,ngModule;\ntry {ngModule=angular.module([\"phoneTemplates\"])}\ncatch(e){ngModule=angular.module(\"phoneTemplates\",[])}\nvar v1=\"<div class=\\\"container-fluid\\\">\\n<div class=\\\"row\\\">\\n<div class=\\\"col-md-2\\\">\\n<p>\\nSearch:\\n<input ng-model=\\\"$ctrl.query\\\"/>\\n</p>\\n<p>\\nSort by:\\n<select ng-model=\\\"$ctrl.orderProp\\\">\\n<option value=\\\"name\\\">Alphabetical</option>\\n<option value=\\\"age\\\">Newest</option>\\n</select>\\n</p>\\n</div>\\n<div class=\\\"col-md-10\\\">\\n<ul class=\\\"phones\\\">\\n<li ng-repeat=\\\"phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp\\\" class=\\\"thumbnail phone-list-item\\\">\\n<phone-item phone=\\\"phone\\\"></phone-item>\\n</li>\\n</ul>\\n</div>\\n</div>\\n</div>\\n\";\nvar id1=\"phone-list/phone-list.template.html\";\nvar inj=angular.element(window.document).injector();\nif(inj){inj.get(\"$templateCache\").put(id1,v1);}\nelse{ngModule.run([\"$templateCache\",function(c){c.put(id1,v1)}]);}\nmodule.exports=v1;";
 
 /***/ }),
-/* 61 */
+/* 65 */
 /***/ (function(module, exports) {
 
 var angular=window.angular,ngModule;
@@ -103576,13 +103636,13 @@ else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
 module.exports=v1;
 
 /***/ }),
-/* 62 */
+/* 66 */
 /***/ (function(module, exports) {
 
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["phoneTemplates"])}
 catch(e){ngModule=angular.module("phoneTemplates",[])}
-var v1="<div class=\"container-fluid\">\n<div class=\"row\">\n<div class=\"col-md-2\">\n<p>\nSearch:\n<input ng-model=\"$ctrl.query\"/>\n</p>\n<p>\nSort by:\n<select ng-model=\"$ctrl.orderProp\">\n<option value=\"name\">Alphabetical</option>\n<option value=\"age\">Newest</option>\n</select>\n</p>\n</div>\n<div class=\"col-md-10\">\n<ul class=\"phones\">\n<li ng-repeat=\"phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp\" class=\"thumbnail phone-list-item\">\n<a href=\"#!/phones/{{phone.id}}\" class=\"thumb\">\n<img ng-src=\"{{phone.imageUrl}}\" alt=\"{{phone.name}}\"/>\n</a>\n<a href=\"#!/phones/{{phone.id}}\">{{phone.name}}</a>\n<p>{{phone.snippet}}</p>\n</li>\n</ul>\n</div>\n</div>\n</div>\n";
+var v1="<div class=\"container-fluid\">\n<div class=\"row\">\n<div class=\"col-md-2\">\n<p>\nSearch:\n<input ng-model=\"$ctrl.query\"/>\n</p>\n<p>\nSort by:\n<select ng-model=\"$ctrl.orderProp\">\n<option value=\"name\">Alphabetical</option>\n<option value=\"age\">Newest</option>\n</select>\n</p>\n</div>\n<div class=\"col-md-10\">\n<ul class=\"phones\">\n<li ng-repeat=\"phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp\" class=\"thumbnail phone-list-item\">\n<phone-item phone=\"phone\"></phone-item>\n</li>\n</ul>\n</div>\n</div>\n</div>\n";
 var id1="phone-list/phone-list.template.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
@@ -103590,7 +103650,7 @@ else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
 module.exports=v1;
 
 /***/ }),
-/* 63 */
+/* 67 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -103780,7 +103840,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 64 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {/*! *****************************************************************************
@@ -104908,10 +104968,10 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(63), __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(67), __webpack_require__(6)))
 
 /***/ }),
-/* 65 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104953,7 +105013,7 @@ exports.InnerSubscriber = InnerSubscriber;
 //# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ }),
-/* 66 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104989,7 +105049,7 @@ exports.OuterSubscriber = OuterSubscriber;
 //# sourceMappingURL=OuterSubscriber.js.map
 
 /***/ }),
-/* 67 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105035,7 +105095,7 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ }),
-/* 68 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105046,9 +105106,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(1);
-var ScalarObservable_1 = __webpack_require__(71);
-var EmptyObservable_1 = __webpack_require__(70);
-var isScheduler_1 = __webpack_require__(18);
+var ScalarObservable_1 = __webpack_require__(75);
+var EmptyObservable_1 = __webpack_require__(74);
+var isScheduler_1 = __webpack_require__(19);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -105163,7 +105223,7 @@ exports.ArrayObservable = ArrayObservable;
 //# sourceMappingURL=ArrayObservable.js.map
 
 /***/ }),
-/* 69 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105338,7 +105398,7 @@ var RefCountSubscriber = (function (_super) {
 //# sourceMappingURL=ConnectableObservable.js.map
 
 /***/ }),
-/* 70 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105425,7 +105485,7 @@ exports.EmptyObservable = EmptyObservable;
 //# sourceMappingURL=EmptyObservable.js.map
 
 /***/ }),
-/* 71 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105489,25 +105549,25 @@ exports.ScalarObservable = ScalarObservable;
 //# sourceMappingURL=ScalarObservable.js.map
 
 /***/ }),
-/* 72 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var merge_1 = __webpack_require__(73);
+var merge_1 = __webpack_require__(77);
 exports.merge = merge_1.mergeStatic;
 //# sourceMappingURL=merge.js.map
 
 /***/ }),
-/* 73 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Observable_1 = __webpack_require__(1);
-var ArrayObservable_1 = __webpack_require__(68);
-var mergeAll_1 = __webpack_require__(74);
-var isScheduler_1 = __webpack_require__(18);
+var ArrayObservable_1 = __webpack_require__(72);
+var mergeAll_1 = __webpack_require__(78);
+var isScheduler_1 = __webpack_require__(19);
 /* tslint:enable:max-line-length */
 /**
  * Creates an output Observable which concurrently emits all values from every
@@ -105650,7 +105710,7 @@ exports.mergeStatic = mergeStatic;
 //# sourceMappingURL=merge.js.map
 
 /***/ }),
-/* 74 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105660,8 +105720,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var OuterSubscriber_1 = __webpack_require__(66);
-var subscribeToResult_1 = __webpack_require__(83);
+var OuterSubscriber_1 = __webpack_require__(70);
+var subscribeToResult_1 = __webpack_require__(87);
 /**
  * Converts a higher-order Observable into a first-order Observable which
  * concurrently delivers all values that are emitted on the inner Observables.
@@ -105767,12 +105827,12 @@ exports.MergeAllSubscriber = MergeAllSubscriber;
 //# sourceMappingURL=mergeAll.js.map
 
 /***/ }),
-/* 75 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ConnectableObservable_1 = __webpack_require__(69);
+var ConnectableObservable_1 = __webpack_require__(73);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits the results of invoking a specified selector on items
@@ -105830,12 +105890,12 @@ exports.MulticastOperator = MulticastOperator;
 //# sourceMappingURL=multicast.js.map
 
 /***/ }),
-/* 76 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var multicast_1 = __webpack_require__(75);
+var multicast_1 = __webpack_require__(79);
 var Subject_1 = __webpack_require__(7);
 function shareSubjectFactory() {
     return new Subject_1.Subject();
@@ -105860,7 +105920,7 @@ exports.share = share;
 //# sourceMappingURL=share.js.map
 
 /***/ }),
-/* 77 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105904,7 +105964,7 @@ exports.$$iterator = exports.iterator;
 //# sourceMappingURL=iterator.js.map
 
 /***/ }),
-/* 78 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105937,7 +105997,7 @@ exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 //# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ }),
-/* 79 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105968,7 +106028,7 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ }),
-/* 80 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105977,7 +106037,7 @@ exports.isArray = Array.isArray || (function (x) { return x && typeof x.length =
 //# sourceMappingURL=isArray.js.map
 
 /***/ }),
-/* 81 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105986,7 +106046,7 @@ exports.isArrayLike = (function (x) { return x && typeof x.length === 'number'; 
 //# sourceMappingURL=isArrayLike.js.map
 
 /***/ }),
-/* 82 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105998,19 +106058,19 @@ exports.isPromise = isPromise;
 //# sourceMappingURL=isPromise.js.map
 
 /***/ }),
-/* 83 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var root_1 = __webpack_require__(4);
-var isArrayLike_1 = __webpack_require__(81);
-var isPromise_1 = __webpack_require__(82);
-var isObject_1 = __webpack_require__(17);
+var isArrayLike_1 = __webpack_require__(85);
+var isPromise_1 = __webpack_require__(86);
+var isObject_1 = __webpack_require__(18);
 var Observable_1 = __webpack_require__(1);
-var iterator_1 = __webpack_require__(77);
-var InnerSubscriber_1 = __webpack_require__(65);
-var observable_1 = __webpack_require__(14);
+var iterator_1 = __webpack_require__(81);
+var InnerSubscriber_1 = __webpack_require__(69);
+var observable_1 = __webpack_require__(15);
 function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
     var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
     if (destination.closed) {
@@ -106082,14 +106142,14 @@ exports.subscribeToResult = subscribeToResult;
 //# sourceMappingURL=subscribeToResult.js.map
 
 /***/ }),
-/* 84 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Subscriber_1 = __webpack_require__(3);
 var rxSubscriber_1 = __webpack_require__(8);
-var Observer_1 = __webpack_require__(13);
+var Observer_1 = __webpack_require__(14);
 function toSubscriber(nextOrObserver, error, complete) {
     if (nextOrObserver) {
         if (nextOrObserver instanceof Subscriber_1.Subscriber) {
@@ -106108,12 +106168,12 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ }),
-/* 85 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var errorObject_1 = __webpack_require__(15);
+var errorObject_1 = __webpack_require__(16);
 var tryCatchTarget;
 function tryCatcher() {
     try {
@@ -106133,7 +106193,7 @@ exports.tryCatch = tryCatch;
 //# sourceMappingURL=tryCatch.js.map
 
 /***/ }),
-/* 86 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -108491,11 +108551,11 @@ Zone.__load_patch('util', function (global, Zone, api) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 87 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(19);
-module.exports = __webpack_require__(20);
+__webpack_require__(20);
+module.exports = __webpack_require__(21);
 
 
 /***/ })

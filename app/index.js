@@ -44,6 +44,7 @@
   require('./core/core.webpack');
   require('./phone-detail/phone-detail.webpack');
   require('./phone-list/phone-list.webpack');
+  require('./phone-item/phone-item.webpack');
 
   // Require all the .html files
   //@require "./**/!(index).html"
